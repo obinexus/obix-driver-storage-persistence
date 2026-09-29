@@ -14,8 +14,6 @@ Part of the OBIX monorepo (driver/obix-driver-storage-persistence). See docs/rec
 npm install obix-driver-storage-persistence
 ```
 
-> **Not yet on npm.** The OBIX packages are prepared for publication and are published only on the owner's authorisation; until then this is the command the published package will answer to.
-
 ## Basic usage
 
 ```js
@@ -40,8 +38,9 @@ The architecture of OBIX — the package families and which packages are public 
 
 ## Testing
 
-- 1 test file ships in the npm package (`test/`): it is the evidence of the package's contract, published so that its verification can be read — not runtime code (no entry point reaches it).
-- Run them with `npm test` (`vitest run`) in the OBIX monorepo, which provides the test tooling (Node's test runner, Vitest, TypeScript).
+- 1 test file ships in the npm package (`test/`): the evidence of the package's contract, published so that its verification can be inspected — not runtime code (no entry point reaches it).
+- **Standalone**: 1 of 1 — it reads nothing outside the package.
+- Run them with `npm test` (`vitest run`) in the OBIX monorepo, which provides the test tooling (Node's test runner, Vitest, TypeScript) and the harness.
 
 ## Documentation
 
@@ -52,7 +51,7 @@ The architecture of OBIX — the package families and which packages are public 
 
 - https://github.com/obinexus/obix-driver-storage-persistence — `git@github.com:obinexus/obix-driver-storage-persistence.git`
 - Issues: https://github.com/obinexus/obix-driver-storage-persistence/issues
-- The repository is a clean export of the package from the OBIX monorepo; its lineage (the monorepo commit it was exported from, the sources it was recovered from, earlier names) is in `PROVENANCE.json`.
+- The repository is a clean export of the package from the OBIX monorepo. Its lineage — the sources it was recovered from and its earlier names — is `PROVENANCE.json`, shipped in this package; the repository's copy also records the monorepo commit it was exported from.
 
 ## License
 
