@@ -1,0 +1,71 @@
+{
+  "package": "obix-driver-storage-persistence",
+  "dir": "driver/obix-driver-storage-persistence",
+  "importedBy": "scripts/recovery/import-packages.mjs",
+  "snapshot": "snap-20260924T142414Z",
+  "stage": "stage-2 lift-and-shift (base owner; later stages repair/merge)",
+  "sources": [
+    {
+      "label": "upstream:obix-sdk@1269cfa",
+      "repo": "obix-sdk",
+      "url": "https://github.com/obinexusmk2/obix-sdk",
+      "sha": "1269cfab705cf2b3bb2b2d10d0c149b0760cca2b",
+      "path": "obix-sdk/packages/drivers/storage-persistence",
+      "license": "MIT",
+      "licenseFileUpstream": false,
+      "filesImported": 2,
+      "filesExcluded": 7
+    }
+  ],
+  "originalManifest": {
+    "name": "@obinexusltd/obix-driver-storage-persistence",
+    "version": "0.1.0",
+    "license": "MIT",
+    "bin": null,
+    "scripts": {
+      "build": "tsc",
+      "test": "vitest run"
+    }
+  },
+  "transforms": [
+    "package.json regenerated (lockstep version, exact internal pins, exports with \"types\" first, standard scripts)",
+    "tsconfig.json generated (NodeNext via tsconfig.base.json)",
+    "internal specifiers renamed: none",
+    "relative imports given \".js\"/\"/index.js\" extensions: 0",
+    "LICENSE generated from the declared MIT license (upstream repo had no LICENSE file)",
+    "README.md generated (upstream had none)"
+  ],
+  "localFixes": [],
+  "scopeScrub": {
+    "rule": "scripts/recovery/scrub-rules.mjs (brief: no other OBINexus projects)",
+    "replacementsPerFile": {}
+  },
+  "authoredOverlay": [],
+  "excluded": [
+    "dist/**",
+    "node_modules/**",
+    "lockfiles",
+    "tsconfig*.json (regenerated)",
+    ".gitignore",
+    ".github/**",
+    "coverage/**"
+  ],
+  "unresolvedRelativeImports": [],
+  "note": "no separate repo: obix-sdk is the verifiable source (npm 0.1.0 tarball also published)",
+  "renamedFrom": [
+    {
+      "name": "@obinexusltd/obix-driver-storage-persistence",
+      "dir": "driver/obix-driver-storage-persistence",
+      "stage": "unscoped-naming",
+      "why": "D-102 (2026-09-29): OBIX packages are named without an npm scope — previous name @obinexusltd/obix-driver-storage-persistence, current name obix-driver-storage-persistence (docs/recovery/unscoped-migration.md); the directory, version and exports are unchanged"
+    }
+  ],
+  "export": {
+    "from": "https://github.com/obinexusmk2/obix-monorepo",
+    "branch": "recovery/obix-api-preserving-rebuild",
+    "commit": "69cafc94910c1add865a520877617ac307668875",
+    "directory": "driver/obix-driver-storage-persistence",
+    "exportedBy": "scripts/release/export-repos.mjs",
+    "note": "a clean initial commit of this package; the monorepo history is not imported (D-103). Local machine paths in this record are replaced by <local workspace>."
+  }
+}
